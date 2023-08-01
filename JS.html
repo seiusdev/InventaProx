@@ -1,0 +1,66 @@
+<!-- Suponiendo que has incluido la biblioteca o script requerido para Excel -->
+<!-- Por ejemplo, puedes incluir esto antes de tu código JavaScript -->
+<!-- <script src="ruta_a_la_biblioteca_de_excel.js"></script> -->
+
+<!-- Suponiendo que tienes un formulario con id="form" -->
+<form id="form">
+    <input type="text" id="name" placeholder="Nombre">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Mensaje"></textarea>
+    <button type="button" onclick="enviarFormulario()">Enviar</button>
+  </form>
+  
+  <div id="frecuencia_habitual" style="display: none;">
+    <!-- Otros elementos HTML para la sección de frecuencia habitual -->
+  </div>
+  
+  <script>
+    function enviarFormulario() {
+      var nombre = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var mensaje = document.getElementById("message").value;
+  
+      // Asegurarse de que todos los campos estén completos
+      if (nombre == "" || email == "" || mensaje == "") {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+  
+      // Suponiendo que la biblioteca de Excel está cargada, crear un nuevo archivo de Excel
+      var libroDeTrabajo = new Excel.Workbook();
+  
+      // Suponiendo que la biblioteca de Excel está cargada, crear una nueva hoja de cálculo
+      var hoja = libroDeTrabajo.getSheet("Hoja1");
+  
+      // Agregar los datos del formulario a la hoja de cálculo
+      hoja.getCell("A1").setValue(nombre);
+      hoja.getCell("B1").setValue(email);
+      hoja.getCell("C1").setValue(mensaje);
+  
+      // Guardar el archivo de Excel
+      libroDeTrabajo.save("datos_del_formulario.xlsx");
+  
+      // Mostrar un mensaje confirmando que los datos se han guardado
+      alert("Tus datos se han guardado en datos_del_formulario.xlsx.");
+    }
+  
+    const pregunta46Si = document.getElementById("pregunta46_si");
+    const pregunta46No = document.getElementById("pregunta46_no");
+    const frecuenciaHabitual = document.getElementById("frecuencia_habitual");
+  
+    pregunta20Si.addEventListener("change", (evento) => {
+      frecuenciaHabitual.style.display = pregunta20Si.checked ? "block" : "none";
+    });
+  
+    pregunta20No.addEventListener("change", (evento) => {
+      frecuenciaHabitual.style.display = pregunta20No.checked ? "none" : "block";
+    });
+  
+    // Si la página se carga y el usuario ya ha marcado uno de los botones de radio,
+    // mostrar u ocultar el campo de frecuencia en consecuencia.
+    if (pregunta46Si.checked) {
+      frecuenciaHabitual.style.display = "block";
+    } else if (pregunta46No.checked) {
+      frecuenciaHabitual.style.display = "none";
+    }
+  </script>

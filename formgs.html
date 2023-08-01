@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Formulario</title>
+   <link rel="stylesheet" href="CSS.html">
+  </head>
+ <body>
+   <div class="container">
+     <h2>SEIUS Evaluacion General</h2>
+     <form action="URL_DE_TU_APP_WEB" method="post">
+      <!-- Datos -->
+      <fieldset>
+        <legend>Sección 1 - Datos</legend> 
+        <!-- Pregunta 0 - Datos -->
+        <label for="pregunta0">¿Nombre y Apellido?</label>
+        <textarea id="pregunta0" name="pregunta0" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 01 - Cargo -->
+        <label for="pregunta01">¿Cargo que desempeñas?</label>
+        <textarea id="pregunta01" name="pregunta01" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 02 - Combobox -->
+        <label for="unidad">Unidad o departamento al que perteneces:</label>
+        <select id="unidad" name="unidad" required>
+           <option value="">Selecciona una opción</option>
+            <option value="Administrativa">Administrativa</option>
+            <option value="Comerciales">Comerciales</option>
+            <option value="Proyectos">Proyectos</option>
+        </select>
+
+        <!-- Pregunta 03 - Combobox -->
+        <label for="unidad">Superior inmediato:</label>
+        <select id="unidad" name="unidad" required>
+           <option value="">Selecciona una opción</option>
+            <option value="Eduardo Urbina">Eduardo Urbina</option>
+            <option value="Luis Urbina">Luis Urbina</option>
+        </select>
+      </fieldset>
+
+      <!-- Organizacional -->
+      <fieldset>
+        <legend>Sección 2 - Organizacional</legend>
+        <!-- Pregunta 1 - Escala de 1 a 5 -->
+        <label for="pregunta1">¿Los objetivos y valores de la empresa se alinean con tus intereses?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta1_1" name="pregunta1" value="1" required>
+          <label for="pregunta1_1">1</label>
+          <input type="radio" id="pregunta1_2" name="pregunta1" value="2">
+          <label for="pregunta1_2">2</label>
+          <input type="radio" id="pregunta1_3" name="pregunta1" value="3">
+          <label for="pregunta1_3">3</label>
+          <input type="radio" id="pregunta1_4" name="pregunta1" value="4">
+          <label for="pregunta1_4">4</label>
+          <input type="radio" id="pregunta1_5" name="pregunta1" value="5">
+          <label for="pregunta1_5">5</label>
+        </div>
+
+        <!-- Pregunta 2 - Escala de 1 a 5 -->
+        <label for="pregunta2">¿Consideras que la formación recibida ha sido adecuada?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta2_1" name="pregunta2" value="1" required>
+          <label for="pregunta2_1">1</label>
+          <input type="radio" id="pregunta2_2" name="pregunta2" value="2">
+          <label for="pregunta2_2">2</label>
+          <input type="radio" id="pregunta2_3" name="pregunta2" value="3">
+          <label for="pregunta2_3">3</label>
+          <input type="radio" id="pregunta2_4" name="pregunta2" value="4">
+          <label for="pregunta2_4">4</label>
+          <input type="radio" id="pregunta2_5" name="pregunta2" value="5">
+          <label for="pregunta2_5">5</label>
+        </div>
+
+        <!-- Pregunta 3 - Escala de 1 a 5 -->
+        <label for="pregunta3">¿Consideras que las guías e instructivos son intuitivos para trabajar efectivamente?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta3_1" name="pregunta3" value="1" required>
+          <label for="pregunta3_1">1</label>
+          <input type="radio" id="pregunta3_2" name="pregunta3" value="2">
+          <label for="pregunta3_2">2</label>
+          <input type="radio" id="pregunta3_3" name="pregunta3" value="3">
+          <label for="pregunta3_3">3</label>
+          <input type="radio" id="pregunta3_4" name="pregunta3" value="4">
+          <label for="pregunta3_4">4</label>
+          <input type="radio" id="pregunta3_5" name="pregunta3" value="5">
+          <label for="pregunta3_5">5</label>
+        </div>
+
+        <!-- Pregunta 4 - Escala de 1 a 5 -->
+        <label for="pregunta4">¿Consideras que has sido dotado de las herramientas necesarias para trabajar efectivamente?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta4_1" name="pregunta4" value="1" required>
+          <label for="pregunta4_1">1</label>
+          <input type="radio" id="pregunta4_2" name="pregunta4" value="2">
+          <label for="pregunta4_2">2</label>
+          <input type="radio" id="pregunta4_3" name="pregunta4" value="3">
+          <label for="pregunta4_3">3</label>
+          <input type="radio" id="pregunta4_4" name="pregunta4" value="4">
+          <label for="pregunta4_4">4</label>
+          <input type="radio" id="pregunta4_5" name="pregunta4" value="5">
+          <label for="pregunta4_5">5</label>
+        </div>
+
+        <!-- Pregunta 5 - Escala de 1 a 5 -->
+        <label for="pregunta5">¿Consideras que tienes acceso a recursos necesarios para trabajar efectivamente?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta5_1" name="pregunta5" value="1" required>
+          <label for="pregunta5_1">1</label>
+          <input type="radio" id="pregunta5_2" name="pregunta5" value="2">
+          <label for="pregunta5_2">2</label>
+          <input type="radio" id="pregunta5_3" name="pregunta5" value="3">
+          <label for="pregunta5_3">3</label>
+          <input type="radio" id="pregunta5_4" name="pregunta5" value="4">
+          <label for="pregunta5_4">4</label>
+          <input type="radio" id="pregunta5_5" name="pregunta5" value="5">
+          <label for="pregunta5_5">5</label>
+        </div>
+
+        <!-- Pregunta 6 - Escala de 1 a 5 -->
+        <label for="pregunta6">¿Consideras que el espacio es ideal para trabajar, relajarte y divertirte?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta6_1" name="pregunta6" value="1" required>
+          <label for="pregunta6_1">1</label>
+          <input type="radio" id="pregunta6_2" name="pregunta6" value="2">
+          <label for="pregunta6_2">2</label>
+          <input type="radio" id="pregunta6_3" name="pregunta6" value="3">
+          <label for="pregunta6_3">3</label>
+          <input type="radio" id="pregunta6_4" name="pregunta6" value="4">
+          <label for="pregunta6_4">4</label>
+          <input type="radio" id="pregunta6_5" name="pregunta6" value="5">
+          <label for="pregunta6_5">5</label>
+        </div>
+
+        <!-- Pregunta 7 - Escala de 1 a 5 -->
+        <label for="pregunta7">¿Consideras que el horario laboral es adecuado?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta7_1" name="pregunta7" value="1" required>
+          <label for="pregunta7_1">1</label>
+          <input type="radio" id="pregunta7_2" name="pregunta7" value="2">
+          <label for="pregunta7_2">2</label>
+          <input type="radio" id="pregunta7_3" name="pregunta7" value="3">
+          <label for="pregunta7_3">3</label>
+          <input type="radio" id="pregunta7_4" name="pregunta7" value="4">
+          <label for="pregunta7_4">4</label>
+          <input type="radio" id="pregunta7_5" name="pregunta7" value="5">
+          <label for="pregunta7_5">5</label>
+        </div>
+
+        <!-- Pregunta 8 - Escala de 1 a 5 -->
+        <label for="pregunta8">¿Consideras que la remuneración económica que recibes es adecuada?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta8_1" name="pregunta8" value="1" required>
+          <label for="pregunta8_1">1</label>
+          <input type="radio" id="pregunta8_2" name="pregunta8" value="2">
+          <label for="pregunta8_2">2</label>
+          <input type="radio" id="pregunta8_3" name="pregunta8" value="3">
+          <label for="pregunta8_3">3</label>
+          <input type="radio" id="pregunta8_4" name="pregunta8" value="4">
+          <label for="pregunta8_4">4</label>
+          <input type="radio" id="pregunta8_5" name="pregunta8" value="5">
+          <label for="pregunta8_5">5</label>
+        </div>
+
+        <!-- Pregunta 9 - Escala de 1 a 5 -->
+        <label for="pregunta9">¿Consideras que son reconocidos tus logros en la empresa?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta9_1" name="pregunta9" value="1" required>
+          <label for="pregunta9_1">1</label>
+          <input type="radio" id="pregunta9_2" name="pregunta9" value="2">
+          <label for="pregunta9_2">2</label>
+          <input type="radio" id="pregunta9_3" name="pregunta9" value="3">
+          <label for="pregunta9_3">3</label>
+          <input type="radio" id="pregunta9_4" name="pregunta9" value="4">
+          <label for="pregunta9_4">4</label>
+          <input type="radio" id="pregunta9_5" name="pregunta9" value="5">
+          <label for="pregunta9_5">5</label>
+        </div>
+
+        <!-- Pregunta 10 - Escala de 1 a 5 -->
+        <label for="pregunta10">¿Consideras que eres valorado por tu talento y habilidades en la empresa?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta10_1" name="pregunta10" value="1" required>
+          <label for="pregunta10_1">1</label>
+          <input type="radio" id="pregunta10_2" name="pregunta10" value="2">
+          <label for="pregunta10_2">2</label>
+          <input type="radio" id="pregunta10_3" name="pregunta10" value="3">
+          <label for="pregunta10_3">3</label>
+          <input type="radio" id="pregunta10_4" name="pregunta10" value="4">
+          <label for="pregunta10_4">4</label>
+          <input type="radio" id="pregunta10_5" name="pregunta10" value="5">
+          <label for="pregunta10_5">5</label>
+        </div>
+
+        <!-- Pregunta 11 - Escala de 1 a 5 -->
+        <label for="pregunta11">¿Consideras que recibes una retribución justa por tu esfuerzo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta11_1" name="pregunta11" value="1" required>
+          <label for="pregunta11_1">1</label>
+          <input type="radio" id="pregunta11_2" name="pregunta11" value="2">
+          <label for="pregunta11_2">2</label>
+          <input type="radio" id="pregunta11_3" name="pregunta11" value="3">
+          <label for="pregunta11_3">3</label>
+          <input type="radio" id="pregunta11_4" name="pregunta11" value="4">
+          <label for="pregunta11_4">4</label>
+          <input type="radio" id="pregunta11_5" name="pregunta11" value="5">
+          <label for="pregunta11_5">5</label>
+        </div>
+
+        <!-- Pregunta 12 - Escala de 1 a 5 -->
+        <label for="pregunta12">¿Consideras que la empresa fomenta expresar ideas y dar sugerencias para mejorar?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta12_1" name="pregunta12" value="1" required>
+          <label for="pregunta12_1">1</label>
+          <input type="radio" id="pregunta12_2" name="pregunta12" value="2">
+          <label for="pregunta12_2">2</label>
+          <input type="radio" id="pregunta12_3" name="pregunta12" value="3">
+          <label for="pregunta12_3">3</label>
+          <input type="radio" id="pregunta12_4" name="pregunta12" value="4">
+          <label for="pregunta12_4">4</label>
+          <input type="radio" id="pregunta12_5" name="pregunta12" value="5">
+          <label for="pregunta12_5">5</label>
+        </div>
+
+        <!-- Pregunta 13 - Escala de 1 a 5 -->
+        <label for="pregunta13">¿Consideras que la empresa fomenta el trabajo en equipo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta13_1" name="pregunta13" value="1" required>
+          <label for="pregunta13_1">1</label>
+          <input type="radio" id="pregunta13_2" name="pregunta13" value="2">
+          <label for="pregunta13_2">2</label>
+          <input type="radio" id="pregunta13_3" name="pregunta13" value="3">
+          <label for="pregunta13_3">3</label>
+          <input type="radio" id="pregunta13_4" name="pregunta13" value="4">
+          <label for="pregunta13_4">4</label>
+          <input type="radio" id="pregunta13_5" name="pregunta13" value="5">
+          <label for="pregunta13_5">5</label>
+        </div>
+
+        <!-- Pregunta 14 - Escala de 1 a 5 -->
+        <label for="pregunta14">¿Consideras que la empresa ofrece oportunidades de crecimiento profesional?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta14_1" name="pregunta14" value="1" required>
+          <label for="pregunta14_1">1</label>
+          <input type="radio" id="pregunta14_2" name="pregunta14" value="2">
+          <label for="pregunta14_2">2</label>
+          <input type="radio" id="pregunta14_3" name="pregunta14" value="3">
+          <label for="pregunta14_3">3</label>
+          <input type="radio" id="pregunta14_4" name="pregunta14" value="4">
+          <label for="pregunta14_4">4</label>
+          <input type="radio" id="pregunta14_5" name="pregunta14" value="5">
+          <label for="pregunta14_5">5</label>
+        </div>
+
+        <!-- Pregunta 15 - Escala de 1 a 5 -->
+        <label for="pregunta15">¿Consideras que sientes orgullo de representar a SEIUS? Te sientes inspirado a ser mejor y te emociona ir a trabajar</label>
+        <div class="escala">
+          <input type="radio" id="pregunta15_1" name="pregunta15" value="1" required>
+          <label for="pregunta15_1">1</label>
+          <input type="radio" id="pregunta15_2" name="pregunta15" value="2">
+          <label for="pregunta15_2">2</label>
+          <input type="radio" id="pregunta15_3" name="pregunta15" value="3">
+          <label for="pregunta15_3">3</label>
+          <input type="radio" id="pregunta15_4" name="pregunta15" value="4">
+          <label for="pregunta15_4">4</label>
+          <input type="radio" id="pregunta15_5" name="pregunta15" value="5">
+          <label for="pregunta15_5">5</label>
+        </div>
+
+        <!-- Pregunta 16 - Escala de 1 a 5 -->
+        <label for="pregunta16">¿Cuando hablas de la empresa con otros es de forma positiva?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta16_1" name="pregunta16" value="1" required>
+          <label for="pregunta16_1">1</label>
+          <input type="radio" id="pregunta16_2" name="pregunta16" value="2">
+          <label for="pregunta16_2">2</label>
+          <input type="radio" id="pregunta16_3" name="pregunta16" value="3">
+          <label for="pregunta16_3">3</label>
+          <input type="radio" id="pregunta16_4" name="pregunta16" value="4">
+          <label for="pregunta16_4">4</label>
+          <input type="radio" id="pregunta16_5" name="pregunta16" value="5">
+          <label for="pregunta16_5">5</label>
+        </div>
+
+        <!-- Pregunta 17 - Escala de 1 a 5 -->
+        <label for="pregunta17">¿Cuál es la posibilidad que sigas trabajando en la empresa los próximos 2 años?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta17_1" name="pregunta17" value="1" required>
+          <label for="pregunta17_1">1</label>
+          <input type="radio" id="pregunta17_2" name="pregunta17" value="2">
+          <label for="pregunta17_2">2</label>
+          <input type="radio" id="pregunta17_3" name="pregunta17" value="3">
+          <label for="pregunta17_3">3</label>
+          <input type="radio" id="pregunta17_4" name="pregunta17" value="4">
+          <label for="pregunta17_4">4</label>
+          <input type="radio" id="pregunta17_5" name="pregunta17" value="5">
+          <label for="pregunta17_5">5</label>
+        </div>
+
+        <!-- Pregunta 18 - Escala de 1 a 5 -->
+        <label for="pregunta18">¿Cuál es la posibilidad que recomiendes la empresa a familiares o amigos?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta18_1" name="pregunta18" value="1" required>
+          <label for="pregunta18_1">1</label>
+          <input type="radio" id="pregunta18_2" name="pregunta18" value="2">
+          <label for="pregunta18_2">2</label>
+          <input type="radio" id="pregunta18_3" name="pregunta18" value="3">
+          <label for="pregunta18_3">3</label>
+          <input type="radio" id="pregunta18_4" name="pregunta18" value="4">
+          <label for="pregunta18_4">4</label>
+          <input type="radio" id="pregunta18_5" name="pregunta18" value="5">
+          <label for="pregunta18_5">5</label>
+        </div>
+
+        <!-- Pregunta 19 - Respuesta Abierta -->
+        <label for="pregunta19">¿Qué cambios te gustaría se implementaran en SEIUS?</label>
+        <textarea id="pregunta19" name="pregunta19" rows="4" cols="50" maxlength="1000"></textarea>
+      </fieldset>
+
+      <!-- Auto evaluación -->
+      <fieldset>
+        <legend>Sección 3 - Auto evaluación</legend> 
+        <!-- Pregunta 20 - Respuesta Abierta -->
+        <label for="pregunta20">¿Cuáles son las 3 responsabilidades principales de tu cargo?</label>
+        <textarea id="pregunta20" name="pregunta20" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 21 - Respuesta Abierta -->
+        <label for="pregunta21">¿Qué tareas adicionales a tu cargo realizas?</label>
+        <textarea id="pregunta21" name="pregunta21" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 22 - Respuesta Abierta -->
+        <label for="pregunta22">¿Qué objetivos asignados haz alcanzado?</label>
+        <textarea id="pregunta22" name="pregunta22" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 23 - Respuesta Abierta -->
+        <label for="pregunta23">¿Qué objetivos asignados están por alcanzar?</label>
+        <textarea id="pregunta23" name="pregunta23" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 24 - Respuesta Abierta -->
+        <label for="pregunta24">¿Qué objetivos propones este año?</label>
+        <textarea id="pregunta24" name="pregunta24" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 25 - Respuesta Abierta -->
+        <label for="pregunta25">¿Qué cambios harías a tu trabajo?</label>
+        <textarea id="pregunta25" name="pregunta25" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 26 - Escala de 1 a 5 -->
+        <label for="pregunta26">¿Considera que estás completamente preparado para tu trabajo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta26_1" name="pregunta26" value="1" required>
+          <label for="pregunta26_1">1</label>
+          <input type="radio" id="pregunta26_2" name="pregunta26" value="2">
+          <label for="pregunta26_2">2</label>
+          <input type="radio" id="pregunta26_3" name="pregunta26" value="3">
+          <label for="pregunta26_3">3</label>
+          <input type="radio" id="pregunta26_4" name="pregunta26" value="4">
+          <label for="pregunta26_4">4</label>
+          <input type="radio" id="pregunta26_5" name="pregunta26" value="5">
+          <label for="pregunta26_5">5</label>
+        </div>
+        
+        <!-- Pregunta 27 - Escala de 1 a 5 -->
+        <label for="pregunta27">¿Consideras que la empresa aprovecha eficazmente todas tus habilidades?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta27_1" name="pregunta27" value="1" required>
+          <label for="pregunta27_1">1</label>
+          <input type="radio" id="pregunta27_2" name="pregunta27" value="2">
+          <label for="pregunta27_2">2</label>
+          <input type="radio" id="pregunta27_3" name="pregunta27" value="3">
+          <label for="pregunta27_3">3</label>
+          <input type="radio" id="pregunta27_4" name="pregunta27" value="4">
+          <label for="pregunta27_4">4</label>
+          <input type="radio" id="pregunta27_5" name="pregunta27" value="5">
+          <label for="pregunta27_5">5</label>
+        </div>
+
+         <!-- Pregunta 28 - Escala de 1 a 5 -->
+        <label for="pregunta28">¿Consideras tener completamente claro lo que se espera de ti?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta28_1" name="pregunta28" value="1" required>
+          <label for="pregunta28_1">1</label>
+          <input type="radio" id="pregunta28_2" name="pregunta28" value="2">
+          <label for="pregunta28_2">2</label>
+          <input type="radio" id="pregunta28_3" name="pregunta28" value="3">
+          <label for="pregunta28_3">3</label>
+          <input type="radio" id="pregunta28_4" name="pregunta28" value="4">
+          <label for="pregunta28_4">4</label>
+          <input type="radio" id="pregunta28_5" name="pregunta28" value="5">
+          <label for="pregunta28_5">5</label>
+        </div>
+
+        <!-- Pregunta 29 - Escala de 1 a 5 -->
+        <label for="pregunta29">¿Consideras que confías en los miembros de tu equipo para realizar tu trabajo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta29_1" name="pregunta29" value="1" required>
+          <label for="pregunta29_1">1</label>
+          <input type="radio" id="pregunta29_2" name="pregunta29" value="2">
+          <label for="pregunta29_2">2</label>
+          <input type="radio" id="pregunta29_3" name="pregunta29" value="3">
+          <label for="pregunta29_3">3</label>
+          <input type="radio" id="pregunta29_4" name="pregunta29" value="4">
+          <label for="pregunta29_4">4</label>
+          <input type="radio" id="pregunta29_5" name="pregunta29" value="5">
+          <label for="pregunta29_5">5</label>
+        </div>
+
+        <!-- Pregunta 30 - Escala de 1 a 5 -->
+        <label for="pregunta30">¿Consideras que las capacitaciones en las que participaste fueron suficientes?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta28_1" name="pregunta30" value="1" required>
+          <label for="pregunta30_1">1</label>
+          <input type="radio" id="pregunta28_2" name="pregunta30" value="2">
+          <label for="pregunta30_2">2</label>
+          <input type="radio" id="pregunta28_3" name="pregunta30" value="3">
+          <label for="pregunta30_3">3</label>
+          <input type="radio" id="pregunta28_4" name="pregunta30" value="4">
+          <label for="pregunta30_4">4</label>
+          <input type="radio" id="pregunta28_5" name="pregunta30" value="5">
+          <label for="pregunta30_5">5</label>
+        </div>
+
+        <!-- Pregunta 31 - Respuesta Abierta -->
+        <label for="pregunta31">¿Qué cambios harías a tu trabajo?</label>
+        <textarea id="pregunta31" name="pregunta31" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 32 - Respuesta Abierta -->
+        <label for="pregunta32">¿En qué te gustaría capacitarte o certificarte?<label>
+        <textarea id="pregunta32" name="pregunta32" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 33 - Escala de 1 a 5 -->
+        <label for="pregunta33">¿Consideras que hay alguien que pueda cubrir tus actividades si faltas?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta33_1" name="pregunta33" value="1" required>
+          <label for="pregunta33_1">1</label>
+          <input type="radio" id="pregunta33_2" name="pregunta33" value="2">
+          <label for="pregunta33_2">2</label>
+          <input type="radio" id="pregunta33_3" name="pregunta33" value="3">
+          <label for="pregunta33_3">3</label>
+          <input type="radio" id="pregunta33_4" name="pregunta33" value="4">
+          <label for="pregunta33_4">4</label>
+          <input type="radio" id="pregunta33_5" name="pregunta33" value="5">
+          <label for="pregunta33_5">5</label>
+        </div>
+
+        <!-- Pregunta 34 - Respuesta Abierta -->
+        <label for="pregunta34">¿Qué áreas o aspectos consideras que necesitas mejorar?<label>
+        <textarea id="pregunta34" name="pregunta34" rows="4" cols="50" maxlength="1000"></textarea>
+
+        <!-- Pregunta 35 - Escala de 1 a 10 -->
+        <label for="pregunta35">¿Consideras que las capacitaciones en las que participaste fueron suficientes?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta35_1" name="pregunta35" value="1" required>
+          <label for="pregunta35_1">1</label>
+          <input type="radio" id="pregunta35_2" name="pregunta35" value="2">
+          <label for="pregunta35_2">2</label>
+          <input type="radio" id="pregunta35_3" name="pregunta35" value="3">
+          <label for="pregunta35_3">3</label>
+          <input type="radio" id="pregunta35_4" name="pregunta35" value="4">
+          <label for="pregunta35_4">4</label>
+          <input type="radio" id="pregunta35_5" name="pregunta35" value="5">
+          <label for="pregunta35_5">5</label>
+           <input type="radio" id="pregunta35_6" name="pregunta35" value="6">
+          <label for="pregunta35_6">5</label>
+           <input type="radio" id="pregunta35_7" name="pregunta35" value="7">
+          <label for="pregunta35_7">5</label>
+           <input type="radio" id="pregunta35_8" name="pregunta35" value="8">
+          <label for="pregunta35_8">5</label>
+           <input type="radio" id="pregunta35_9" name="pregunta35" value="9">
+          <label for="pregunta35_9">5</label>
+           <input type="radio" id="pregunta35_10" name="pregunta35" value="10">
+          <label for="pregunta35_10">5</label>
+        </div>
+      </fieldset>
+
+      <!-- Bienestar -->
+      <fieldset>
+        <legend>Sección 4 - Bienestar</legend> 
+        <!-- Pregunta 36- Escala de 1 a 5 -->
+        <label for="pregunta36">¿Cuando piensas en tu trabajo lo haces de forma positiva?Te motiva lo que haces y reconoces la importancia de tu cargo</label>
+        <div class="escala">
+          <input type="radio" id="pregunta36_1" name="pregunta36" value="1" required>
+          <label for="pregunta36_1">1</label>
+          <input type="radio" id="pregunta36_2" name="pregunta36" value="2">
+          <label for="pregunta36_2">2</label>
+          <input type="radio" id="pregunta36_3" name="pregunta36" value="3">
+          <label for="pregunta36_3">3</label>
+          <input type="radio" id="pregunta36_4" name="pregunta36" value="4">
+          <label for="pregunta36_4">4</label>
+          <input type="radio" id="pregunta36_5" name="pregunta36" value="5">
+          <label for="pregunta36_5">5</label>
+        </div>
+
+        <!-- Pregunta 37 - Escala de 1 a 5 -->
+        <label for="pregunta37">¿Te sientes con energía y activo durante tu trabajo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta37_1" name="pregunta37" value="1" required>
+          <label for="pregunta37_1">1</label>
+          <input type="radio" id="pregunta37_2" name="pregunta37" value="2">
+          <label for="pregunta37_2">2</label>
+          <input type="radio" id="pregunta37_3" name="pregunta37" value="3">
+          <label for="pregunta37_3">3</label>
+          <input type="radio" id="pregunta37_4" name="pregunta37" value="4">
+          <label for="pregunta37_4">4</label>
+          <input type="radio" id="pregunta37_5" name="pregunta37" value="5">
+          <label for="pregunta37_5">5</label>
+        </div>
+
+        <!-- Pregunta 38 - Escala de 1 a 5 -->
+        <label for="pregunta38">¿Sientes que haz tenido algún éxito durante este tiempo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta38_1" name="pregunta38" value="1" required>
+          <label for="pregunta38_1">1</label>
+          <input type="radio" id="pregunta38_2" name="pregunta38" value="2">
+          <label for="pregunta38_2">2</label>
+          <input type="radio" id="pregunta38_3" name="pregunta38" value="3">
+          <label for="pregunta38_3">3</label>
+          <input type="radio" id="pregunta38_4" name="pregunta38" value="4">
+          <label for="pregunta38_4">4</label>
+          <input type="radio" id="pregunta38_5" name="pregunta38" value="5">
+          <label for="pregunta38_5">5</label>
+        </div>
+
+        <!-- Pregunta 39 - Escala de 1 a 5 -->
+        <label for="pregunta39">¿Consideras que hay respeto entre los compañeros de trabajo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta39_1" name="pregunta39" value="1" required>
+          <label for="pregunta39_1">1</label>
+          <input type="radio" id="pregunta39_2" name="pregunta39" value="2">
+          <label for="pregunta39_2">2</label>
+          <input type="radio" id="pregunta39_3" name="pregunta39" value="3">
+          <label for="pregunta39_3">3</label>
+          <input type="radio" id="pregunta39_4" name="pregunta39" value="4">
+          <label for="pregunta39_4">4</label>
+          <input type="radio" id="pregunta39_5" name="pregunta39" value="5">
+          <label for="pregunta39_5">5</label>
+        </div>
+
+        <!-- Pregunta 40 - Escala de 1 a 5 -->
+        <label for="pregunta40">¿Sientes que hay colegas de trabajo hostiles o conflictivos?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta40_1" name="pregunta40" value="1" required>
+          <label for="pregunta40_1">1</label>
+          <input type="radio" id="pregunta40_2" name="pregunta40" value="2">
+          <label for="pregunta40_2">2</label>
+          <input type="radio" id="pregunta40_3" name="pregunta40" value="3">
+          <label for="pregunta40_3">3</label>
+          <input type="radio" id="pregunta40_4" name="pregunta40" value="4">
+          <label for="pregunta40_4">4</label>
+          <input type="radio" id="pregunta40_5" name="pregunta40" value="5">
+          <label for="pregunta40_5">5</label>
+        </div>
+
+        <!-- Pregunta 41 - Escala de 1 a 5 -->
+        <label for="pregunta41">¿Sientes que hay buena relación entre las unidades/departamentos de trabajo?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta41_1" name="pregunta41" value="1" required>
+          <label for="pregunta41_1">1</label>
+          <input type="radio" id="pregunta41_2" name="pregunta41" value="2">
+          <label for="pregunta41_2">2</label>
+          <input type="radio" id="pregunta41_3" name="pregunta41" value="3">
+          <label for="pregunta41_3">3</label>
+          <input type="radio" id="pregunta41_4" name="pregunta41" value="4">
+          <label for="pregunta41_4">4</label>
+          <input type="radio" id="pregunta41_5" name="pregunta41" value="5">
+          <label for="pregunta41_5">5</label>
+        </div>
+
+        <!-- Pregunta 42 - Escala de 1 a 5 -->
+        <label for="pregunta42">¿Sientes que haz hecho amigos dentro de la empresa?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta42_1" name="pregunta42" value="1" required>
+          <label for="pregunta42_1">1</label>
+          <input type="radio" id="pregunta42_2" name="pregunta42" value="2">
+          <label for="pregunta42_2">2</label>
+          <input type="radio" id="pregunta42_3" name="pregunta42" value="3">
+          <label for="pregunta42_3">3</label>
+          <input type="radio" id="pregunta42_4" name="pregunta42" value="4">
+          <label for="pregunta42_4">4</label>
+          <input type="radio" id="pregunta42_5" name="pregunta42" value="5">
+          <label for="pregunta42_5">5</label>
+        </div>
+
+        <!-- Pregunta 43 - Escala de 1 a 5 -->
+        <label for="pregunta43">¿Consideras que las condiciones laborales de la empresa son seguras?Sin poner en riesgo tu integridad física, psicológica, profesional o legal</label>
+        <div class="escala">
+          <input type="radio" id="pregunta43_1" name="pregunta43" value="1" required>
+          <label for="pregunta43_1">1</label>
+          <input type="radio" id="pregunta43_2" name="pregunta43" value="2">
+          <label for="pregunta43_2">2</label>
+          <input type="radio" id="pregunta43_3" name="pregunta43" value="3">
+          <label for="pregunta43_3">3</label>
+          <input type="radio" id="pregunta43_4" name="pregunta43" value="4">
+          <label for="pregunta43_4">4</label>
+          <input type="radio" id="pregunta43_5" name="pregunta43" value="5">
+          <label for="pregunta43_5">5</label>
+        </div>
+
+        <!-- Pregunta 44 - Escala de 1 a 5 -->
+        <label for="pregunta44">¿Consideras que la retroalimentación que recibes es productiva?Te ayuda a mejorar</label>
+        <div class="escala">
+          <input type="radio" id="pregunta44_1" name="pregunta44" value="1" required>
+          <label for="pregunta44_1">1</label>
+          <input type="radio" id="pregunta44_2" name="pregunta44" value="2">
+          <label for="pregunta44_2">2</label>
+          <input type="radio" id="pregunta44_3" name="pregunta44" value="3">
+          <label for="pregunta44_3">3</label>
+          <input type="radio" id="pregunta44_4" name="pregunta44" value="4">
+          <label for="pregunta44_4">4</label>
+          <input type="radio" id="pregunta44_5" name="pregunta44" value="5">
+          <label for="pregunta44_5">5</label>
+        </div>
+
+        <!-- Pregunta 45 - Escala de 1 a 5 -->
+        <label for="pregunta45">¿Consideras que la empresa te facilita un equilibro entre la vida laboral y personal?</label>
+        <div class="escala">
+          <input type="radio" id="pregunta45_1" name="pregunta45" value="1" required>
+          <label for="pregunta45_1">1</label>
+          <input type="radio" id="pregunta45_2" name="pregunta45" value="2">
+          <label for="pregunta45_2">2</label>
+          <input type="radio" id="pregunta45_3" name="pregunta45" value="3">
+          <label for="pregunta45_3">3</label>
+          <input type="radio" id="pregunta45_4" name="pregunta45" value="4">
+          <label for="pregunta45_4">4</label>
+          <input type="radio" id="pregunta45_5" name="pregunta45" value="5">
+          <label for="pregunta45_5">5</label>
+        </div>
+
+        <!-- Pregunta 46 - Escala de 1 a 5 -->
+        <label for="pregunta46">¿Llevas el trabajo a tu horario personal?</label>
+         <div class="radio-buttons">
+          <input type="radio" id="pregunta46_no" name="pregunta46" value="No" required>
+          <label for="pregunta46_no">No</label>
+          <input type="radio" id="pregunta46_si" name="pregunta46" value="Sí">
+          <label for="pregunta45_2">2</label>
+          <label for="pregunta46_si">Sí</label>
+      </div>
+
+        <!-- Opciones de frecuencia - Solo visible si seleccionaron "Sí" -->
+         <div id="frecuencia_habitual" style="display:none;">
+           <label for="frecuencia">Selecciona la frecuencia más habitual:</label>
+           <select id="frecuencia" name="frecuencia">
+             <option value="Diario">A diario</option>
+             <option value="Semana">Cada semana</option>
+             <option value="Quincena">Cada quincena</option>
+             <option value="Mes">Cada mes</option>
+            </select>
+      </fieldset>
+      <!-- Enviar formulario -->
+      <button type="submit">Enviar</button>
+    </form>
+
+   <script>
+    // Código para mostrar u ocultar el campo de frecuencia dependiendo de la opción seleccionada
+    const pregunta46Si = document.getElementById("pregunta46_si");
+    const pregunta46No = document.getElementById("pregunta46_no");
+    const frecuenciaHabitual = document.getElementById("frecuencia_habitual");
+
+    pregunta46Si.addEventListener("change", (evento) => {
+      frecuenciaHabitual.style.display = pregunta46Si.checked ? "block" : "none";
+    });
+
+    pregunta46No.addEventListener("change", (evento) => {
+      frecuenciaHabitual.style.display = pregunta46No.checked ? "none" : "block";
+    });
+
+    // Si la página se carga y el usuario ya ha marcado uno de los botones de radio,
+    // mostrar u ocultar el campo de frecuencia en consecuencia.
+    if (pregunta46Si.checked) {
+      frecuenciaHabitual.style.display = "block";
+    } else if (pregunta46No.checked) {
+      frecuenciaHabitual.style.display = "none";
+    }
+
+    // Función para enviar las respuestas del formulario al servidor (Google Apps Script)
+    function enviarRespuestas(event) {
+      event.preventDefault();
+      var formData = new FormData(document.getElementById("encuestaForm"));
+      google.script.run.guardarRespuestas(formData);
+    }
+   </script>
+  </body>
+</html>
