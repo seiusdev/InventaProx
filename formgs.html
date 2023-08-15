@@ -1,37 +1,80 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
 <head>
-    <title>Encuesta General de la Empresa</title>
-    <style>
-        .oculto {
-            display: none;
-        }
-
-        .pregunta {
-            display: none;
-        }
-
-        .pregunta.visible {
-            display: block;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us Form</title>
+  <style type="text/css">
+  .oculto {
+    display: none;
+    }
+    
+    .pregunta {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    .pregunta.visible {
+    display: block;
+    }
+    
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    }
+    
+    .encuesta {
+    max-width: 600px;
+    margin: 0 auto;
+    }
+    
+    .escala {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    }
+    
+    .escala label {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    }
+    
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
     </style>
 </head>
-
 <body>
+
+
     <div class="encuesta">
         <fieldset>
             <legend>Encuesta General de la Empresa</legend>
-            <form id="encuestaForm" onsubmit="enviarRespuestas(event)">
+            <form name="submit-formulario" method="post">
                 <!-- Pregunta 1 - Datos -->
                 <div class="pregunta" id="pregunta1_textarea">
                     <label for="pregunta1">Nombre y Apellido</label>
-                    <textarea id="pregunta1" name="pregunta1" rows="1" cols="20" maxlength="1000" required></textarea>
+                    <textarea id="Nombre y Apellido" name="Nombre y Apellido" rows="1" cols="20" maxlength="1000" required></textarea>
                 </div>
 
                 <div class="pregunta" id="pregunta2">
                     <label for="pregunta2">Unidad o departamento al que perteneces</label>
-                    <select name="pregunta2" required>
+                    <select name="Unidad o departamento" required>
                         <option value="Seleccione una opción" selected disabled>Seleccione una opción</option>
                         <option value="Administrativo">Administrativo</option>
                         <option value="Comercial">Comercial</option>
@@ -45,15 +88,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta3_1" name="pregunta3" value="1" required>
+                        <input type="radio" id="pregunta3_1" name="Objetivos y valores de la empresa" value="1" required>
                         <label for="pregunta3_1">1</label>
-                        <input type="radio" id="pregunta3_2" name="pregunta3" value="2">
+                        <input type="radio" id="pregunta3_2" name="Objetivos y valores de la empresa" value="2">
                         <label for="pregunta3_2">2</label>
-                        <input type="radio" id="pregunta3_3" name="pregunta3" value="3">
+                        <input type="radio" id="pregunta3_3" name="Objetivos y valores de la empresa" value="3">
                         <label for="pregunta3_3">3</label>
-                        <input type="radio" id="pregunta3_4" name="pregunta3" value="4">
+                        <input type="radio" id="pregunta3_4" name="Objetivos y valores de la empresa" value="4">
                         <label for="pregunta3_4">4</label>
-                        <input type="radio" id="pregunta3_5" name="pregunta3" value="5">
+                        <input type="radio" id="pregunta3_5" name="Objetivos y valores de la empresa" value="5">
                         <label for="pregunta3_5">5</label>
                     </div>
                 </div>
@@ -64,15 +107,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta4_1" name="pregunta4" value="1" required>
+                        <input type="radio" id="pregunta4_1" name="Formacion recibida" value="1" required>
                         <label for="pregunta4_1">1</label>
-                        <input type="radio" id="pregunta4_2" name="pregunta4" value="2">
+                        <input type="radio" id="pregunta4_2" name="Formacion recibida" value="2">
                         <label for="pregunta4_2">2</label>
-                        <input type="radio" id="pregunta4_3" name="pregunta4" value="3">
+                        <input type="radio" id="pregunta4_3" name="Formacion recibida" value="3">
                         <label for="pregunta4_3">3</label>
-                        <input type="radio" id="pregunta4_4" name="pregunta4" value="4">
+                        <input type="radio" id="pregunta4_4" name="Formacion recibida" value="4">
                         <label for="pregunta4_4">4</label>
-                        <input type="radio" id="pregunta4_5" name="pregunta4" value="5">
+                        <input type="radio" id="pregunta4_5" name="Formacion recibida" value="5">
                         <label for="pregunta4_5">5</label>
                     </div>
                 </div>
@@ -84,15 +127,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta5_1" name="pregunta5" value="1" required>
+                        <input type="radio" id="pregunta5_1" name="Guias e instructivos" value="1" required>
                         <label for="pregunta5_1">1</label>
-                        <input type="radio" id="pregunta5_2" name="pregunta5" value="2">
+                        <input type="radio" id="pregunta5_2" name="Guias e instructivos" value="2">
                         <label for="pregunta5_2">2</label>
-                        <input type="radio" id="pregunta5_3" name="pregunta5" value="3">
+                        <input type="radio" id="pregunta5_3" name="Guias e instructivos" value="3">
                         <label for="pregunta5_3">3</label>
-                        <input type="radio" id="pregunta5_4" name="pregunta5" value="4">
+                        <input type="radio" id="pregunta5_4" name="Guias e instructivos" value="4">
                         <label for="pregunta5_4">4</label>
-                        <input type="radio" id="pregunta5_5" name="pregunta5" value="5">
+                        <input type="radio" id="pregunta5_5" name="Guias e instructivos" value="5">
                         <label for="pregunta5_5">5</label>
                     </div>
                 </div>
@@ -104,15 +147,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta6_1" name="pregunta6" value="1" required>
+                        <input type="radio" id="pregunta6_1" name="Herramientas necesarias para trabajar" value="1" required>
                         <label for="pregunta6_1">1</label>
-                        <input type="radio" id="pregunta6_2" name="pregunta6" value="2">
+                        <input type="radio" id="pregunta6_2" name="Herramientas necesarias para trabajar" value="2">
                         <label for="pregunta6_2">2</label>
-                        <input type="radio" id="pregunta6_3" name="pregunta6" value="3">
+                        <input type="radio" id="pregunta6_3" name="Herramientas necesarias para trabajar" value="3">
                         <label for="pregunta6_3">3</label>
-                        <input type="radio" id="pregunta6_4" name="pregunta6" value="4">
+                        <input type="radio" id="pregunta6_4" name="Herramientas necesarias para trabajar" value="4">
                         <label for="pregunta6_4">4</label>
-                        <input type="radio" id="pregunta6_5" name="pregunta6" value="5">
+                        <input type="radio" id="pregunta6_5" name="Herramientas necesarias para trabajar" value="5">
                         <label for="pregunta6_5">5</label>
                     </div>
                 </div>
@@ -124,15 +167,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta7_1" name="pregunta7" value="1" required>
+                        <input type="radio" id="pregunta7_1" name="Acceso a recursos necesarios" value="1" required>
                         <label for="pregunta7_1">1</label>
-                        <input type="radio" id="pregunta7_2" name="pregunta7" value="2">
+                        <input type="radio" id="pregunta7_2" name="Acceso a recursos necesarios" value="2">
                         <label for="pregunta7_2">2</label>
-                        <input type="radio" id="pregunta7_3" name="pregunta7" value="3">
+                        <input type="radio" id="pregunta7_3" name="Acceso a recursos necesarios" value="3">
                         <label for="pregunta7_3">3</label>
-                        <input type="radio" id="pregunta7_4" name="pregunta7" value="4">
+                        <input type="radio" id="pregunta7_4" name="Acceso a recursos necesarios" value="4">
                         <label for="pregunta7_4">4</label>
-                        <input type="radio" id="pregunta7_5" name="pregunta7" value="5">
+                        <input type="radio" id="pregunta7_5" name="Acceso a recursos necesarios" value="5">
                         <label for="pregunta7_5">5</label>
                     </div>
                 </div>
@@ -144,15 +187,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta8_1" name="pregunta8" value="1" required>
+                        <input type="radio" id="pregunta8_1" name="Espacio ideal para trabajar" value="1" required>
                         <label for="pregunta8_1">1</label>
-                        <input type="radio" id="pregunta8_2" name="pregunta8" value="2">
+                        <input type="radio" id="pregunta8_2" name="Espacio ideal para trabajar" value="2">
                         <label for="pregunta8_2">2</label>
-                        <input type="radio" id="pregunta8_3" name="pregunta8" value="3">
+                        <input type="radio" id="pregunta8_3" name="Espacio ideal para trabajar" value="3">
                         <label for="pregunta8_3">3</label>
-                        <input type="radio" id="pregunta8_4" name="pregunta8" value="4">
+                        <input type="radio" id="pregunta8_4" name="Espacio ideal para trabajar" value="4">
                         <label for="pregunta8_4">4</label>
-                        <input type="radio" id="pregunta8_5" name="pregunta8" value="5">
+                        <input type="radio" id="pregunta8_5" name="Espacio ideal para trabajar" value="5">
                         <label for="pregunta8_5">5</label>
                     </div>
                 </div>
@@ -163,15 +206,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta9_1" name="pregunta9" value="1" required>
+                        <input type="radio" id="pregunta9_1" name="Horario laboral adecuado" value="1" required>
                         <label for="pregunta9_1">1</label>
-                        <input type="radio" id="pregunta9_2" name="pregunta9" value="2">
+                        <input type="radio" id="pregunta9_2" name="Horario laboral adecuado" value="2">
                         <label for="pregunta9_2">2</label>
-                        <input type="radio" id="pregunta9_3" name="pregunta9" value="3">
+                        <input type="radio" id="pregunta9_3" name="Horario laboral adecuado" value="3">
                         <label for="pregunta9_3">3</label>
-                        <input type="radio" id="pregunta9_4" name="pregunta9" value="4">
+                        <input type="radio" id="pregunta9_4" name="Horario laboral adecuado" value="4">
                         <label for="pregunta9_4">4</label>
-                        <input type="radio" id="pregunta9_5" name="pregunta9" value="5">
+                        <input type="radio" id="pregunta9_5" name="Horario laboral adecuado" value="5">
                         <label for="pregunta9_5">5</label>
                     </div>
                 </div>
@@ -182,15 +225,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta10_1" name="pregunta10" value="1" required>
+                        <input type="radio" id="pregunta10_1" name="Remuneracion economica adecuada" value="1" required>
                         <label for="pregunta10_1">1</label>
-                        <input type="radio" id="pregunta10_2" name="pregunta10" value="2">
+                        <input type="radio" id="pregunta10_2" name="Remuneracion economica adecuada" value="2">
                         <label for="pregunta10_2">2</label>
-                        <input type="radio" id="pregunta10_3" name="pregunta10" value="3">
+                        <input type="radio" id="pregunta10_3" name="Remuneracion economica adecuada" value="3">
                         <label for="pregunta10_3">3</label>
-                        <input type="radio" id="pregunta10_4" name="pregunta10" value="4">
+                        <input type="radio" id="pregunta10_4" name="Remuneracion economica adecuada" value="4">
                         <label for="pregunta10_4">4</label>
-                        <input type="radio" id="pregunta10_5" name="pregunta10" value="5">
+                        <input type="radio" id="pregunta10_5" name="Remuneracion economica adecuada" value="5">
                         <label for="pregunta10_5">5</label>
                     </div>
                 </div>
@@ -201,15 +244,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta11_1" name="pregunta11" value="1" required>
+                        <input type="radio" id="pregunta11_1" name="Rononocidos tus logros en la empresa" value="1" required>
                         <label for="pregunta11_1">1</label>
-                        <input type="radio" id="pregunta11_2" name="pregunta11" value="2">
+                        <input type="radio" id="pregunta11_2" name="Rononocidos tus logros en la empresa" value="2">
                         <label for="pregunta11_2">2</label>
-                        <input type="radio" id="pregunta11_3" name="pregunta11" value="3">
+                        <input type="radio" id="pregunta11_3" name="Rononocidos tus logros en la empresa" value="3">
                         <label for="pregunta11_3">3</label>
-                        <input type="radio" id="pregunta11_4" name="pregunta11" value="4">
+                        <input type="radio" id="pregunta11_4" name="Rononocidos tus logros en la empresa" value="4">
                         <label for="pregunta11_4">4</label>
-                        <input type="radio" id="pregunta11_5" name="pregunta11" value="5">
+                        <input type="radio" id="pregunta11_5" name="Rononocidos tus logros en la empresa" value="5">
                         <label for="pregunta11_5">5</label>
                     </div>
                 </div>
@@ -221,15 +264,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta12_1" name="pregunta12" value="1" required>
+                        <input type="radio" id="pregunta12_1" name="Valorado talento y habilidades" value="1" required>
                         <label for="pregunta12_1">1</label>
-                        <input type="radio" id="pregunta12_2" name="pregunta12" value="2">
+                        <input type="radio" id="pregunta12_2" name="Valorado talento y habilidades" value="2">
                         <label for="pregunta12_2">2</label>
-                        <input type="radio" id="pregunta12_3" name="pregunta12" value="3">
+                        <input type="radio" id="pregunta12_3" name="Valorado talento y habilidades" value="3">
                         <label for="pregunta12_3">3</label>
-                        <input type="radio" id="pregunta12_4" name="pregunta12" value="4">
+                        <input type="radio" id="pregunta12_4" name="Valorado talento y habilidades" value="4">
                         <label for="pregunta12_4">4</label>
-                        <input type="radio" id="pregunta12_5" name="pregunta12" value="5">
+                        <input type="radio" id="pregunta12_5" name="Valorado talento y habilidades" value="5">
                         <label for="pregunta12_5">5</label>
                     </div>
                 </div>
@@ -240,15 +283,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta13_1" name="pregunta13" value="1" required>
+                        <input type="radio" id="pregunta13_1" name="Atribucion justa por tu esfuerzo" value="1" required>
                         <label for="pregunta13_1">1</label>
-                        <input type="radio" id="pregunta13_2" name="pregunta13" value="2">
+                        <input type="radio" id="pregunta13_2" name="Atribucion justa por tu esfuerzo" value="2">
                         <label for="pregunta13_2">2</label>
-                        <input type="radio" id="pregunta13_3" name="pregunta13" value="3">
+                        <input type="radio" id="pregunta13_3" name="Atribucion justa por tu esfuerzo" value="3">
                         <label for="pregunta13_3">3</label>
-                        <input type="radio" id="pregunta13_4" name="pregunta13" value="4">
+                        <input type="radio" id="pregunta13_4" name="Atribucion justa por tu esfuerzo" value="4">
                         <label for="pregunta13_4">4</label>
-                        <input type="radio" id="pregunta13_5" name="pregunta13" value="5">
+                        <input type="radio" id="pregunta13_5" name="Atribucion justa por tu esfuerzo" value="5">
                         <label for="pregunta13_5">5</label>
                     </div>
                 </div>
@@ -260,15 +303,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta14_1" name="pregunta14" value="1" required>
+                        <input type="radio" id="pregunta14_1" name="Fomenta expresar ideas y sugerencias" value="1" required>
                         <label for="pregunta14_1">1</label>
-                        <input type="radio" id="pregunta14_2" name="pregunta14" value="2">
+                        <input type="radio" id="pregunta14_2" name="Fomenta expresar ideas y sugerencias" value="2">
                         <label for="pregunta14_2">2</label>
-                        <input type="radio" id="pregunta14_3" name="pregunta14" value="3">
+                        <input type="radio" id="pregunta14_3" name="Fomenta expresar ideas y sugerencias" value="3">
                         <label for="pregunta14_3">3</label>
-                        <input type="radio" id="pregunta14_4" name="pregunta14" value="4">
+                        <input type="radio" id="pregunta14_4" name="Fomenta expresar ideas y sugerencias" value="4">
                         <label for="pregunta14_4">4</label>
-                        <input type="radio" id="pregunta14_5" name="pregunta14" value="5">
+                        <input type="radio" id="pregunta14_5" name="Fomenta expresar ideas y sugerencias" value="5">
                         <label for="pregunta14_5">5</label>
                     </div>
                 </div>
@@ -279,15 +322,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta15_1" name="pregunta15" value="1" required>
+                        <input type="radio" id="pregunta15_1" name="Empresa fomenta el trabajo en equipo" value="1" required>
                         <label for="pregunta15_1">1</label>
-                        <input type="radio" id="pregunta15_2" name="pregunta15" value="2">
+                        <input type="radio" id="pregunta15_2" name="Empresa fomenta el trabajo en equipo" value="2">
                         <label for="pregunta15_2">2</label>
-                        <input type="radio" id="pregunta15_3" name="pregunta15" value="3">
+                        <input type="radio" id="pregunta15_3" name="Empresa fomenta el trabajo en equipo" value="3">
                         <label for="pregunta15_3">3</label>
-                        <input type="radio" id="pregunta15_4" name="pregunta15" value="4">
+                        <input type="radio" id="pregunta15_4" name="Empresa fomenta el trabajo en equipo" value="4">
                         <label for="pregunta15_4">4</label>
-                        <input type="radio" id="pregunta15_5" name="pregunta15" value="5">
+                        <input type="radio" id="pregunta15_5" name="Empresa fomenta el trabajo en equipo" value="5">
                         <label for="pregunta15_5">5</label>
                     </div>
                 </div>
@@ -299,15 +342,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta16_1" name="pregunta16" value="1" required>
+                        <input type="radio" id="pregunta16_1" name="Empresa ofrece oportunidades" value="1" required>
                         <label for="pregunta16_1">1</label>
-                        <input type="radio" id="pregunta16_2" name="pregunta16" value="2">
+                        <input type="radio" id="pregunta16_2" name="Empresa ofrece oportunidades" value="2">
                         <label for="pregunta16_2">2</label>
-                        <input type="radio" id="pregunta16_3" name="pregunta16" value="3">
+                        <input type="radio" id="pregunta16_3" name="Empresa ofrece oportunidades" value="3">
                         <label for="pregunta16_3">3</label>
-                        <input type="radio" id="pregunta16_4" name="pregunta16" value="4">
+                        <input type="radio" id="pregunta16_4" name="Empresa ofrece oportunidades" value="4">
                         <label for="pregunta16_4">4</label>
-                        <input type="radio" id="pregunta16_5" name="pregunta16" value="5">
+                        <input type="radio" id="pregunta16_5" name="Empresa ofrece oportunidades" value="5">
                         <label for="pregunta16_5">5</label>
                     </div>
                 </div>
@@ -319,15 +362,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta17_1" name="pregunta17" value="1" required>
+                        <input type="radio" id="pregunta17_1" name="sientes orgullo de representar a SEIUS" value="1" required>
                         <label for="pregunta17_1">1</label>
-                        <input type="radio" id="pregunta17_2" name="pregunta17" value="2">
+                        <input type="radio" id="pregunta17_2" name="sientes orgullo de representar a SEIUS" value="2">
                         <label for="pregunta17_2">2</label>
-                        <input type="radio" id="pregunta17_3" name="pregunta17" value="3">
+                        <input type="radio" id="pregunta17_3" name="sientes orgullo de representar a SEIUS" value="3">
                         <label for="pregunta17_3">3</label>
-                        <input type="radio" id="pregunta17_4" name="pregunta17" value="4">
+                        <input type="radio" id="pregunta17_4" name="sientes orgullo de representar a SEIUS" value="4">
                         <label for="pregunta17_4">4</label>
-                        <input type="radio" id="pregunta17_5" name="pregunta17" value="5">
+                        <input type="radio" id="pregunta17_5" name="sientes orgullo de representar a SEIUS" value="5">
                         <label for="pregunta17_5">5</label>
                     </div>
                 </div>
@@ -338,15 +381,15 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 5.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta18_1" name="pregunta18" value="1" required>
+                        <input type="radio" id="pregunta18_1" name="Hablar de otra empresa de forma positiva" value="1" required>
                         <label for="pregunta18_1">1</label>
-                        <input type="radio" id="pregunta18_2" name="pregunta18" value="2">
+                        <input type="radio" id="pregunta18_2" name="Hablar de otra empresa de forma positiva" value="2">
                         <label for="pregunta18_2">2</label>
-                        <input type="radio" id="pregunta18_3" name="pregunta18" value="3">
+                        <input type="radio" id="pregunta18_3" name="Hablar de otra empresa de forma positiva" value="3">
                         <label for="pregunta18_3">3</label>
-                        <input type="radio" id="pregunta18_4" name="pregunta18" value="4">
+                        <input type="radio" id="pregunta18_4" name="Hablar de otra empresa de forma positiva" value="4">
                         <label for="pregunta18_4">4</label>
-                        <input type="radio" id="pregunta18_5" name="pregunta18" value="5">
+                        <input type="radio" id="pregunta18_5" name="Hablar de otra empresa de forma positiva" value="5">
                         <label for="pregunta18_5">5</label>
                     </div>
                 </div>
@@ -358,25 +401,25 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 10.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta19_1" name="pregunta19" value="1" required>
+                        <input type="radio" id="pregunta19_1" name="Posibilidad de seguir trabajando en la empresa" value="1" required>
                         <label for="pregunta19_1">1</label>
-                        <input type="radio" id="pregunta19_2" name="pregunta19" value="2">
+                        <input type="radio" id="pregunta19_2" name="Posibilidad de seguir trabajando en la empresa" value="2">
                         <label for="pregunta19_2">2</label>
-                        <input type="radio" id="pregunta19_3" name="pregunta19" value="3">
+                        <input type="radio" id="pregunta19_3" name="Posibilidad de seguir trabajando en la empresa" value="3">
                         <label for="pregunta19_3">3</label>
-                        <input type="radio" id="pregunta19_4" name="pregunta19" value="4">
+                        <input type="radio" id="pregunta19_4" name="Posibilidad de seguir trabajando en la empresa" value="4">
                         <label for="pregunta19_4">4</label>
-                        <input type="radio" id="pregunta19_5" name="pregunta19" value="5">
+                        <input type="radio" id="pregunta19_5" name="Posibilidad de seguir trabajando en la empresa" value="5">
                         <label for="pregunta19_5">5</label>
-                        <input type="radio" id="pregunta19_6" name="pregunta19" value="6">
+                        <input type="radio" id="pregunta19_6" name="Posibilidad de seguir trabajando en la empresa" value="6">
                         <label for="pregunta19_6">6</label>
-                        <input type="radio" id="pregunta19_7" name="pregunta19" value="7">
+                        <input type="radio" id="pregunta19_7" name="Posibilidad de seguir trabajando en la empresa" value="7">
                         <label for="pregunta19_7">7</label>
-                        <input type="radio" id="pregunta19_8" name="pregunta19" value="8">
+                        <input type="radio" id="pregunta19_8" name="Posibilidad de seguir trabajando en la empresa" value="8">
                         <label for="pregunta19_8">8</label>
-                        <input type="radio" id="pregunta19_9" name="pregunta19" value="9">
+                        <input type="radio" id="pregunta19_9" name="Posibilidad de seguir trabajando en la empresa" value="9">
                         <label for="pregunta19_9">9</label>
-                        <input type="radio" id="pregunta19_10" name="pregunta19" value="10">
+                        <input type="radio" id="pregunta19_10" name="Posibilidad de seguir trabajando en la empresa" value="10">
                         <label for="pregunta19_10">10</label>
                     </div>
                 </div>
@@ -388,25 +431,25 @@
                     <br>
                     <label for="pregunta3">1.Desacuerdo 10.Deacuerdo</label>
                     <div class="escala">
-                        <input type="radio" id="pregunta20_1" name="pregunta20" value="1" required>
+                        <input type="radio" id="pregunta20_1" name="Posibilidad de recomendar la empresa" value="1" required>
                         <label for="pregunta20_1">1</label>
-                        <input type="radio" id="pregunta20_2" name="pregunta20" value="2">
+                        <input type="radio" id="pregunta20_2" name="Posibilidad de recomendar la empresa" value="2">
                         <label for="pregunta20_2">2</label>
-                        <input type="radio" id="pregunta20_3" name="pregunta20" value="3">
+                        <input type="radio" id="pregunta20_3" name="Posibilidad de recomendar la empresa" value="3">
                         <label for="pregunta20_3">3</label>
-                        <input type="radio" id="pregunta20_4" name="pregunta20" value="4">
+                        <input type="radio" id="pregunta20_4" name="Posibilidad de recomendar la empresa" value="4">
                         <label for="pregunta20_4">4</label>
-                        <input type="radio" id="pregunta20_5" name="pregunta20" value="5">
+                        <input type="radio" id="pregunta20_5" name="Posibilidad de recomendar la empresa" value="5">
                         <label for="pregunta20_5">5</label>
-                        <input type="radio" id="pregunta20_6" name="pregunta20" value="6">
+                        <input type="radio" id="pregunta20_6" name="Posibilidad de recomendar la empresa" value="6">
                         <label for="pregunta20_6">6</label>
-                        <input type="radio" id="pregunta20_7" name="pregunta20" value="7">
+                        <input type="radio" id="pregunta20_7" name="Posibilidad de recomendar la empresa" value="7">
                         <label for="pregunta20_7">7</label>
-                        <input type="radio" id="pregunta20_8" name="pregunta20" value="8">
+                        <input type="radio" id="pregunta20_8" name="Posibilidad de recomendar la empresa" value="8">
                         <label for="pregunta20_8">8</label>
-                        <input type="radio" id="pregunta20_9" name="pregunta20" value="9">
+                        <input type="radio" id="pregunta20_9" name="Posibilidad de recomendar la empresa" value="9">
                         <label for="pregunta20_9">9</label>
-                        <input type="radio" id="pregunta20_10" name="pregunta20" value="10">
+                        <input type="radio" id="pregunta20_10" name="Posibilidad de recomendar la empresa" value="10">
                         <label for="pregunta20_10">10</label>
                     </div>
                 </div>
@@ -419,61 +462,112 @@
                 <!-- Botones de navegación -->
                 <div class="navegacion">
                     <button type="button" id="btnAnterior" onclick="mostrarAnterior()" class="oculto">Anterior</button>
-                    <button type="button" onclick="mostrarSiguiente()">Siguiente</button>
-                    <button type="submit" id="enviarRespuestasBoton" class="oculto">Enviar Respuestas</button>
+                    <button id="btnSiguiente" class="btn btn-primary" type="button" onclick="mostrarSiguiente()">Siguiente</button>
+                    <button id="enviarRespuestasBoton" class="oculto" onclick="enviarRespuestas(event)">Enviar Respuestas</button>
+                     <input class="btn btn-primary"type=submit value="enviar"></b> 
+
             </form>
         </fieldset>
     </div>
-    <script>
-        alert('¡Bienvenido a participar en la Encuesta General de la Empresa!');
+</body>
+</html>
+<script>
+       alert('¡Bienvenido a participar en la Encuesta General de la Empresa!');
 
-        const preguntas = document.querySelectorAll('.pregunta');
-        let currentPregunta = 0;
+// Obtén una referencia al botón de envío y al textarea
+const enviarRespuestasBoton = document.getElementById("enviarRespuestasBoton");
+const pregunta21_textarea = document.getElementById("pregunta21_textarea");
+
+const preguntas = document.querySelectorAll('.pregunta');
+let currentPregunta = 0;
+
+preguntas[currentPregunta].classList.add('visible');
+
+function mostrarAnterior() {
+    const preguntaActual = preguntas[currentPregunta];
+    preguntaActual.classList.remove('visible');
+    currentPregunta--;
+
+    preguntas[currentPregunta].classList.add('visible');
+    actualizarBotones();
+}
+
+function mostrarSiguiente() {
+    const preguntaActual = preguntas[currentPregunta];
+
+    if (currentPregunta === 0 || validarRespuesta(preguntaActual)) {
+        preguntaActual.classList.remove('visible');
+        currentPregunta++;
 
         preguntas[currentPregunta].classList.add('visible');
+        actualizarBotones();
+    } else {
+        alert('Por favor, responde la pregunta antes de continuar.');
+    }
+}
 
-        // Función para mostrar la pregunta anterior
-        function mostrarAnterior() {
-            var preguntaActual = document.querySelector('.pregunta.visible');
-            var preguntaAnterior = preguntaActual.previousElementSibling;
-            preguntaActual.classList.remove('visible');
-            preguntaAnterior.classList.add('visible');
 
-            if (!preguntaAnterior.previousElementSibling) {
-                document.getElementById('btnAnterior').classList.add('oculto');
-            }
+function validarRespuesta(pregunta) {
+    const respuestaUsuario = pregunta.querySelector('input[type="radio"]:checked');
+    const respuestaSelect = pregunta.querySelector('select');
+    const respuestaTextarea = pregunta.querySelector('textarea');
 
-            document.getElementById('enviarRespuestasBoton').classList.add('oculto');
-        }
+    if (respuestaUsuario) {
+        return true;
+    }
 
-        // Función para mostrar la siguiente pregunta
-        function mostrarSiguiente() {
-            var preguntaActual = document.querySelector('.pregunta.visible');
-            var siguientePregunta = preguntaActual.nextElementSibling;
-            preguntaActual.classList.remove('visible');
-            siguientePregunta.classList.add('visible');
+    if (respuestaSelect && respuestaSelect.value !== "Seleccione una opción") {
+        return true;
+    }
 
-            if (siguientePregunta.nextElementSibling) {
-                document.getElementById('btnAnterior').classList.remove('oculto');
-            } else {
-                document.getElementById('enviarRespuestasBoton').classList.remove('oculto');
-            }
-        }
+    if (respuestaTextarea && respuestaTextarea.value.trim() !== "") {
+        return true;
+    }
 
-        // Función para enviar respuestas
-        function enviarRespuestas(event) {
-            event.preventDefault();
-            var respuestas = {};
+    return false;
+}
 
-            // Obtener respuestas de las preguntas y almacenar en el objeto respuestas
-            respuestas.pregunta1 = document.querySelector('input[name="pregunta1"]:checked').value;
-            respuestas.pregunta2 = document.querySelector('select[name="pregunta2"]').value;
-            // ...
+function verificarValidacion() {
+    const preguntaActual = preguntas[currentPregunta];
+    const esValido = validarRespuesta(preguntaActual);
+    console.log('Validación:', esValido);
+}
 
-            // Mostrar alerta de agradecimiento
-            alert('¡Gracias por completar la encuesta!');
-        }
-    </script>
-</body>
 
-</html>
+function actualizarBotones() {
+    const btnAnterior = document.getElementById('btnAnterior');
+    const btnSiguiente = document.getElementById('btnSiguiente');
+    const btnEnviar = document.getElementById('enviarRespuestasBoton');
+
+    if (currentPregunta === 0) {
+        btnAnterior.classList.add('oculto');
+    } else {
+        btnAnterior.classList.remove('oculto');
+    }
+
+    if (currentPregunta === preguntas.length - 1) {
+        btnSiguiente.classList.add('oculto');
+        btnEnviar.classList.remove('oculto');
+    } else {
+        btnSiguiente.classList.remove('oculto');
+        btnEnviar.classList.add('oculto');
+    }
+}
+
+if (currentPregunta === preguntas.length - 1) {
+    const btnEnviar = document.getElementById('enviarRespuestasBoton');
+    btnEnviar.classList.remove('oculto');
+} else {
+    const btnEnviar = document.getElementById('enviarRespuestasBoton');
+    btnEnviar.classList.add('oculto');
+}
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyvzx1CqzxKUTmMOgWyZPlBXgBF-JFrfLnn7XsjJbnVjBBwKouvBQPAHtn_dh1SeLZc/exec'
+const form = document.forms['submit-formulario']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+                    </script>
